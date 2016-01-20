@@ -61,9 +61,9 @@ public class Authentification extends javax.swing.JFrame {
 
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
        Surname.surname=txt_surname.getText();
-       //PageAccueil p = new PageAccueil();
+       PageAccueil p = new PageAccueil();
        this.setVisible(false);
-       //p.setVisible(true);
+       p.setVisible(true);
     }//GEN-LAST:event_btn_startActionPerformed
 
     /**
