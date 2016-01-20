@@ -16,6 +16,7 @@ public class PageAccueil extends javax.swing.JFrame {
      */
     public PageAccueil() {
         initComponents();
+        
     }
 
     /**
@@ -27,92 +28,56 @@ public class PageAccueil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btn_memo = new javax.swing.JButton();
-        btn_reflexion = new javax.swing.JButton();
-        bnt_calcul1 = new javax.swing.JButton();
+        rad_ref = new javax.swing.JRadioButton();
+        rad_memo = new javax.swing.JRadioButton();
+        red_strat = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        btn_go = new javax.swing.JButton();
+        lbl_surname = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Choice");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 51, 204));
-        jLabel1.setText("Gymnastique du cerveau");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_memo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_memo.setText("Mémorisation");
-        btn_memo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_memoActionPerformed(evt);
-            }
-        });
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setText("What do you prefer?");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 220, 33));
 
-        btn_reflexion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_reflexion.setText("Réflexion");
-        btn_reflexion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_reflexionActionPerformed(evt);
-            }
-        });
+        rad_ref.setBackground(new java.awt.Color(255, 255, 255));
+        rad_ref.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        rad_ref.setText("Reflexion games");
+        jPanel1.add(rad_ref, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        bnt_calcul1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        bnt_calcul1.setText("Calcul Mental");
-        bnt_calcul1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bnt_calcul1ActionPerformed(evt);
-            }
-        });
+        rad_memo.setBackground(new java.awt.Color(255, 255, 255));
+        rad_memo.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        rad_memo.setText("Memory games");
+        jPanel1.add(rad_memo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(242, 242, 242)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(143, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_memo, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bnt_calcul1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(241, 241, 241))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(322, Short.MAX_VALUE)
-                    .addComponent(btn_reflexion, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(238, 238, 238)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
-                .addComponent(bnt_calcul1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(btn_memo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(197, 197, 197)
-                    .addComponent(btn_reflexion, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(245, Short.MAX_VALUE)))
-        );
+        red_strat.setBackground(new java.awt.Color(255, 255, 255));
+        red_strat.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        red_strat.setText("Strategy games");
+        jPanel1.add(red_strat, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 170, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/brain-fit.gif"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 330, 230));
+
+        btn_go.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/bouton-go.jpg"))); // NOI18N
+        jPanel1.add(btn_go, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 100, 100));
+        jPanel1.add(lbl_surname, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 50));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn_memoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_memoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_memoActionPerformed
-
-    private void btn_reflexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reflexionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_reflexionActionPerformed
-
-    private void bnt_calcul1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnt_calcul1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bnt_calcul1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,9 +115,14 @@ public class PageAccueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bnt_calcul1;
-    private javax.swing.JButton btn_memo;
-    private javax.swing.JButton btn_reflexion;
+    private javax.swing.JButton btn_go;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbl_surname;
+    private javax.swing.JRadioButton rad_memo;
+    private javax.swing.JRadioButton rad_ref;
+    private javax.swing.JRadioButton red_strat;
     // End of variables declaration//GEN-END:variables
 }
