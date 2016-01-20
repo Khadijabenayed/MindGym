@@ -16,7 +16,7 @@ public class PageAccueil extends javax.swing.JFrame {
      */
     public PageAccueil() {
         initComponents();
-        
+        lbl_surname.setText("Hello "+Surname.surname+" !!");
     }
 
     /**
@@ -53,16 +53,19 @@ public class PageAccueil extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 220, 33));
 
         rad_ref.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(rad_ref);
         rad_ref.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         rad_ref.setText("Reflexion games");
         jPanel1.add(rad_ref, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         rad_memo.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(rad_memo);
         rad_memo.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         rad_memo.setText("Memory games");
         jPanel1.add(rad_memo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
 
         red_strat.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(red_strat);
         red_strat.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         red_strat.setText("Strategy games");
         jPanel1.add(red_strat, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 170, -1));
@@ -72,7 +75,10 @@ public class PageAccueil extends javax.swing.JFrame {
 
         btn_go.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/bouton-go.jpg"))); // NOI18N
         jPanel1.add(btn_go, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 100, 100));
-        jPanel1.add(lbl_surname, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 50));
+
+        lbl_surname.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        lbl_surname.setForeground(new java.awt.Color(204, 0, 0));
+        jPanel1.add(lbl_surname, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 300, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 440));
 
