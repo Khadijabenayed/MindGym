@@ -12,4 +12,8 @@ package gymnastique.du.cerveau;
  */
 public class jeu3 {
     
+    public static void main(String[] args){
+        Game2048 g=new Game2048();
+        g.run();
+    }
 }

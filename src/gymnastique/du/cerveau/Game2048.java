@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package game2048;
+package gymnastique.du.cerveau;
 
 /**
  *
