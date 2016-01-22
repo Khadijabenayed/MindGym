@@ -2,14 +2,14 @@ import javax.swing.*;
 import java.applet.*;
 
 
-public class MasterMindFenetre extends JFrame
+public class MasterMindFenetre1 extends JFrame
 {
 static
 {
 try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
 catch(Exception e) {}
 }
- MasterMindFenetre()
+ MasterMindFenetre1()
  {
  super("MRG MASTERMIND");
  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

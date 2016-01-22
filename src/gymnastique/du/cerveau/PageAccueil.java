@@ -112,7 +112,7 @@ public class PageAccueil extends javax.swing.JFrame {
 
     private void btn_goActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_goActionPerformed
         // TODO add your handling code here:
-        if (rad_ref.isSelected()==true){
+       /* if (rad_ref.isSelected()==true){
             this.setVisible(false);
         PageReflexion r=new PageReflexion();
         r.setVisible(true);  
@@ -121,7 +121,7 @@ public class PageAccueil extends javax.swing.JFrame {
            this.setVisible(false);
         PageMemory m=new PageMemory();
         m.setVisible(true);   
-         }
+         }*/
     }//GEN-LAST:event_btn_goActionPerformed
 
     /**
