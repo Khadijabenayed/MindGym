@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gymnastique.du.cerveau;
+package gato;
 
 import javax.swing.JButton;
 

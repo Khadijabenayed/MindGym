@@ -6,14 +6,14 @@
 
 package gymnastique.du.cerveau;
 
+
+
 /**
  *
  * @author ASUS
  */
 public class jeu3 {
     
-    public static void main(String[] args){
-        Game2048 g=new Game2048();
-        g.run();
-    }
+   
+    
 }
