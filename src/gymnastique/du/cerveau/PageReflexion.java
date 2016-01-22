@@ -113,7 +113,7 @@ public class PageReflexion extends javax.swing.JFrame {
             Game2048 ga = new Game2048();
             this.setVisible(false);
             
-           ga.setVisible(true);
+           ga.run();
             
     }//GEN-LAST:event_btn_2048ActionPerformed
     

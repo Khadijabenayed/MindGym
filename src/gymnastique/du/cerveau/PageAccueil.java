@@ -67,6 +67,11 @@ public class PageAccueil extends javax.swing.JFrame {
         buttonGroup1.add(rad_memo);
         rad_memo.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         rad_memo.setText("Memory games");
+        rad_memo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_memoActionPerformed(evt);
+            }
+        });
         jPanel1.add(rad_memo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
 
         red_strat.setBackground(new java.awt.Color(255, 255, 255));
@@ -79,6 +84,11 @@ public class PageAccueil extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 330, 230));
 
         btn_go.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/bouton-go.jpg"))); // NOI18N
+        btn_go.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_goActionPerformed(evt);
+            }
+        });
         jPanel1.add(btn_go, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 100, 100));
 
         lbl_surname.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
@@ -92,10 +102,27 @@ public class PageAccueil extends javax.swing.JFrame {
 
     private void rad_refActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_refActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        PageReflexion r=new PageReflexion();
-        r.setVisible(true);
+      
     }//GEN-LAST:event_rad_refActionPerformed
+
+    private void rad_memoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_memoActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_rad_memoActionPerformed
+
+    private void btn_goActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_goActionPerformed
+        // TODO add your handling code here:
+        if (rad_ref.isSelected()==true){
+            this.setVisible(false);
+        PageReflexion r=new PageReflexion();
+        r.setVisible(true);  
+        }
+         if (rad_memo.isSelected()==true){
+           this.setVisible(false);
+        PageMemory m=new PageMemory();
+        m.setVisible(true);   
+         }
+    }//GEN-LAST:event_btn_goActionPerformed
 
     /**
      * @param args the command line arguments
