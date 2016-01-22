@@ -56,6 +56,11 @@ public class PageAccueil extends javax.swing.JFrame {
         buttonGroup1.add(rad_ref);
         rad_ref.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         rad_ref.setText("Reflexion games");
+        rad_ref.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_refActionPerformed(evt);
+            }
+        });
         jPanel1.add(rad_ref, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         rad_memo.setBackground(new java.awt.Color(255, 255, 255));
@@ -84,6 +89,13 @@ public class PageAccueil extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void rad_refActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_refActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        PageReflexion r=new PageReflexion();
+        r.setVisible(true);
+    }//GEN-LAST:event_rad_refActionPerformed
 
     /**
      * @param args the command line arguments

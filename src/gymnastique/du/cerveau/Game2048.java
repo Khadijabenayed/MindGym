@@ -25,5 +25,9 @@ public class Game2048 implements Runnable {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Game2048());
     }
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   
 }
