@@ -31,9 +31,11 @@ public class PageMemory extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btn_XO1 = new javax.swing.JButton();
         btn_go_back = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_XO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/Logo mastermind.jpeg"))); // NOI18N
         btn_XO.addActionListener(new java.awt.event.ActionListener() {
@@ -41,14 +43,18 @@ public class PageMemory extends javax.swing.JFrame {
                 btn_XOActionPerformed(evt);
             }
         });
+        getContentPane().add(btn_XO, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 159, 140, 140));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/Memory.PNG"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 0, -1, 107));
 
+        btn_XO1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/logo taquin.jpg"))); // NOI18N
         btn_XO1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_XO1ActionPerformed(evt);
             }
         });
+        getContentPane().add(btn_XO1, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 309, 140, 140));
 
         btn_go_back.setBackground(new java.awt.Color(204, 204, 204));
         btn_go_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/btn go back.png"))); // NOI18N
@@ -57,46 +63,25 @@ public class PageMemory extends javax.swing.JFrame {
                 btn_go_backActionPerformed(evt);
             }
         });
+        getContentPane().add(btn_go_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 100, 90));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 210, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(btn_XO, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(btn_go_back, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(287, Short.MAX_VALUE)
-                    .addComponent(btn_XO1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(77, 77, 77)))
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 510, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
-                .addComponent(btn_XO, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                .addComponent(btn_go_back, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(309, Short.MAX_VALUE)
-                    .addComponent(btn_XO1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(48, 48, 48)))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 500));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_XOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XOActionPerformed
@@ -111,6 +96,8 @@ public class PageMemory extends javax.swing.JFrame {
 
     private void btn_XO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XO1ActionPerformed
         // TODO add your handling code here:
+        Jouer j =new Jouer();
+                j.setVisible(true);
     }//GEN-LAST:event_btn_XO1ActionPerformed
 
     private void btn_go_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_go_backActionPerformed
@@ -160,5 +147,6 @@ public class PageMemory extends javax.swing.JFrame {
     private javax.swing.JButton btn_XO1;
     private javax.swing.JButton btn_go_back;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
