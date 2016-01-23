@@ -1,6 +1,9 @@
 package al.niidhogg.main;
 
 import java.awt.BorderLayout;
+
+        
+    
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,6 +35,7 @@ import al.niidhogg.demineur.MineException;
 import al.niidhogg.graph.Chargement;
 import al.niidhogg.graph.Dialog;
 import al.niidhogg.son.AePlayWave;
+import javax.swing.UIManager;
 
 /**
  * Classe principale pour le demineur
@@ -39,7 +43,12 @@ import al.niidhogg.son.AePlayWave;
  */
 public class Main extends JFrame
 {
-	private static final long serialVersionUID = 1L;
+	static
+{
+try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
+catch(Exception e) {}
+}
+    private static final long serialVersionUID = 1L;
 	
 	private Game g;
 	
@@ -71,7 +80,7 @@ public class Main extends JFrame
 	/**
 	 * Methode main
 	 */
-	public static void main(String[] args)
+	public   static void main(String[] args)
 	{
 		charg.go();
 		
@@ -275,7 +284,7 @@ public class Main extends JFrame
 				for(int i = 0;i<file.listFiles().length;i++)
 					list[i+1] = file.listFiles()[i].getName();
 				
-				String str = Dialog.listDialog(before, "Choisissez le fichier à charger", "Charger", list);
+				String str = Dialog.listDialog(before, "Choisissez le fichier ï¿½ charger", "Charger", list);
 				if(str != "")
 				{
 					ObjectInputStream ois;
@@ -297,7 +306,7 @@ public class Main extends JFrame
 						Case.setNbrFlag(g.getMap().getNbrFlag());
 						g.getMap().pauseT += (System.currentTimeMillis()-g.getMap().getTimeStamp())/1000;
 					}
-					catch (MineException e1){Dialog.erreur(null, "Impossible de générer la map.");}
+					catch (MineException e1){Dialog.erreur(null, "Impossible de gï¿½nï¿½rer la map.");}
 					catch (FileNotFoundException e1){Dialog.erreur(null, "La fichier est introuvable.");}
 					catch (IOException e1){Dialog.erreur(null, "Impossible de charger la carte.");}
 					catch (ClassNotFoundException e1){Dialog.erreur(null, "Le fichier est endomager ou inconnus.");}
@@ -357,8 +366,8 @@ public class Main extends JFrame
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				Dialog.info(before, "<html>Le but du jeu est de découvrir toute les cases sauf celles contenant des mines.<br />" +
-						"Pour savoir si un case contient une mine il faut suivre une seule et unique rêgle:<br /> Un bloc contenant un nombre touche autant de mine que le nombre en indique, que ce soit sur les côtés ou en diagonal.<br /> Le reste est logique et mathématique.</html>");
+				Dialog.info(before, "<html>Le but du jeu est de dï¿½couvrir toute les cases sauf celles contenant des mines.<br />" +
+						"Pour savoir si un case contient une mine il faut suivre une seule et unique rï¿½gle:<br /> Un bloc contenant un nombre touche autant de mine que le nombre en indique, que ce soit sur les cï¿½tï¿½s ou en diagonal.<br /> Le reste est logique et mathï¿½matique.</html>");
 			}
 		});
 		
@@ -367,7 +376,7 @@ public class Main extends JFrame
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				Dialog.info(before, "<html>Créé par: Niidhogg<br />Version: "+version+"<br />Copyright: <img src='http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png' /><br/>http://creativecommons.org/licenses/by-nc-sa/3.0/</html>");
+				Dialog.info(before, "<html>Crï¿½ï¿½ par: Niidhogg<br />Version: "+version+"<br />Copyright: <img src='http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png' /><br/>http://creativecommons.org/licenses/by-nc-sa/3.0/</html>");
 			}
 		});
 		

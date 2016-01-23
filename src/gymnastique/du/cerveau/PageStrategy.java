@@ -5,6 +5,12 @@
  */
 package gymnastique.du.cerveau;
 
+import al.niidhogg.main.Main;
+import al.niidhogg.demineur.*;
+import al.niidhogg.ensemble.*;
+import al.niidhogg.graph.*;
+
+
 /**
  *
  * @author asus 2014
@@ -115,7 +121,9 @@ public class PageStrategy extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_demineurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_demineurActionPerformed
-        // TODO add your handling code here:
+Main m1= new Main ();
+
+m1.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_btn_demineurActionPerformed
 
     private void btn_dameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dameActionPerformed
