@@ -112,6 +112,7 @@ public class PageStrategy extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_demineurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_demineurActionPerformed
