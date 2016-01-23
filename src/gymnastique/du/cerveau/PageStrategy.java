@@ -122,9 +122,9 @@ public class PageStrategy extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_demineurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_demineurActionPerformed
-Main m1= new Main ();
+/*Main m1= new Main ();
 
-m1.setVisible(true);// TODO add your handling code here:
+m1.setVisible(true);*/// TODO add your handling code here:
     }//GEN-LAST:event_btn_demineurActionPerformed
 
     private void btn_dameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dameActionPerformed
