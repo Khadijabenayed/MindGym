@@ -7,7 +7,7 @@ import javax.swing.UIManager;
 public class Lanceur {
 
 	
-	public static void main(String[] args) {
+	public void run() {
 		try{
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		}

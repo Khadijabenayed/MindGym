@@ -29,14 +29,23 @@ public class PageAccueil extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        btn_go = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         rad_ref = new javax.swing.JRadioButton();
         rad_memo = new javax.swing.JRadioButton();
         red_strat = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
-        btn_go = new javax.swing.JButton();
         lbl_surname = new javax.swing.JLabel();
+        btn_goo = new javax.swing.JButton();
+        btn_go_back = new javax.swing.JButton();
+
+        btn_go.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/bouton-go.jpg"))); // NOI18N
+        btn_go.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_goActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Choice");
@@ -67,11 +76,6 @@ public class PageAccueil extends javax.swing.JFrame {
         buttonGroup1.add(rad_memo);
         rad_memo.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         rad_memo.setText("Memory games");
-        rad_memo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rad_memoActionPerformed(evt);
-            }
-        });
         jPanel1.add(rad_memo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
 
         red_strat.setBackground(new java.awt.Color(255, 255, 255));
@@ -83,46 +87,68 @@ public class PageAccueil extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/brain-fit.gif"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 330, 230));
 
-        btn_go.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/bouton-go.jpg"))); // NOI18N
-        btn_go.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_goActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_go, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 100, 100));
-
         lbl_surname.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
         lbl_surname.setForeground(new java.awt.Color(204, 0, 0));
         jPanel1.add(lbl_surname, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 300, 50));
 
+        btn_goo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/bouton-go.jpg"))); // NOI18N
+        btn_goo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_gooActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_goo, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 90, 80));
+
+        btn_go_back.setBackground(new java.awt.Color(255, 255, 255));
+        btn_go_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/btn go back.png"))); // NOI18N
+        btn_go_back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_go_backActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_go_back, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 100, 90));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 440));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void rad_refActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_refActionPerformed
         // TODO add your handling code here:
-      
-    }//GEN-LAST:event_rad_refActionPerformed
-
-    private void rad_memoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_memoActionPerformed
-        // TODO add your handling code here:
         
-    }//GEN-LAST:event_rad_memoActionPerformed
+       
+    }//GEN-LAST:event_rad_refActionPerformed
 
     private void btn_goActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_goActionPerformed
         // TODO add your handling code here:
-       /* if (rad_ref.isSelected()==true){
-            this.setVisible(false);
-        PageReflexion r=new PageReflexion();
-        r.setVisible(true);  
+         
+    }//GEN-LAST:event_btn_goActionPerformed
+
+    private void btn_gooActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gooActionPerformed
+     
+        if (rad_ref.isSelected()==true){
+          PageReflexion pr = new PageReflexion();
+       this.setVisible(false);
+       pr.setVisible(true);
         }
          if (rad_memo.isSelected()==true){
-           this.setVisible(false);
-        PageMemory m=new PageMemory();
-        m.setVisible(true);   
-         }*/
-    }//GEN-LAST:event_btn_goActionPerformed
+          PageMemory pr = new PageMemory();
+       this.setVisible(false);
+       pr.setVisible(true);
+        }
+          if (red_strat.isSelected()==true){
+          PageStrategy pr = new PageStrategy();
+       this.setVisible(false);
+       pr.setVisible(true);
+        }
+    }//GEN-LAST:event_btn_gooActionPerformed
+
+    private void btn_go_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_go_backActionPerformed
+       this.setVisible(false);
+       Authentification a1 = new Authentification();
+       a1.setVisible(true);
+    }//GEN-LAST:event_btn_go_backActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,6 +176,7 @@ public class PageAccueil extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PageAccueil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -161,6 +188,8 @@ public class PageAccueil extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_go;
+    private javax.swing.JButton btn_go_back;
+    private javax.swing.JButton btn_goo;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

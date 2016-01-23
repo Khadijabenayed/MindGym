@@ -9,12 +9,12 @@ package gymnastique.du.cerveau;
  *
  * @author asus 2014
  */
-public class PageReflexion extends javax.swing.JFrame {
+public class PageStrategy extends javax.swing.JFrame {
 
     /**
-     * Creates new form Page2Reflexion
+     * Creates new form PageStrategy
      */
-    public PageReflexion() {
+    public PageStrategy() {
         initComponents();
     }
 
@@ -28,30 +28,30 @@ public class PageReflexion extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btn_2048 = new javax.swing.JButton();
-        btn_XO = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btn_demineur = new javax.swing.JButton();
+        btn_dame = new javax.swing.JButton();
         btn_go_back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        btn_2048.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/Logo-2048.png"))); // NOI18N
-        btn_2048.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/strategy.PNG"))); // NOI18N
+
+        btn_demineur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/logo_Demineur.jpg"))); // NOI18N
+        btn_demineur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_2048ActionPerformed(evt);
+                btn_demineurActionPerformed(evt);
             }
         });
 
-        btn_XO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/xo-game-22815.jpg"))); // NOI18N
-        btn_XO.addActionListener(new java.awt.event.ActionListener() {
+        btn_dame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/logo dame.jpg"))); // NOI18N
+        btn_dame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_XOActionPerformed(evt);
+                btn_dameActionPerformed(evt);
             }
         });
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/Reflexion.PNG"))); // NOI18N
 
         btn_go_back.setBackground(new java.awt.Color(255, 255, 255));
         btn_go_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gymnastique/du/cerveau/btn go back.png"))); // NOI18N
@@ -66,31 +66,32 @@ public class PageReflexion extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(btn_XO, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(0, 212, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addComponent(btn_go_back, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_2048, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
+                .addComponent(btn_demineur, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(btn_dame, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(btn_XO, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(201, 201, 201)
+                        .addComponent(btn_demineur, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 43, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btn_2048, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(btn_dame, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_go_back, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
@@ -101,43 +102,34 @@ public class PageReflexion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_XOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XOActionPerformed
+    private void btn_demineurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_demineurActionPerformed
         // TODO add your handling code here:
-      
-            Gato_1 g = new Gato_1();
-           // this.setVisible(false);
-            g.setVisible(true);
-        
-        
-    }//GEN-LAST:event_btn_XOActionPerformed
+    }//GEN-LAST:event_btn_demineurActionPerformed
 
-    private void btn_2048ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_2048ActionPerformed
-        // TODO add your handling code here:
-     
-            Game2048 g = new Game2048();
-            //this.setVisible(false);
-       
-    g.run();
-            
-    }//GEN-LAST:event_btn_2048ActionPerformed
+    private void btn_dameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dameActionPerformed
+       // this.setVisible(false);
+       Lanceur a1 = new Lanceur();
+        a1.run();  // TODO add your handling code here:
+    }//GEN-LAST:event_btn_dameActionPerformed
 
     private void btn_go_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_go_backActionPerformed
         this.setVisible(false);
         PageAccueil a1 = new PageAccueil();
         a1.setVisible(true);
     }//GEN-LAST:event_btn_go_backActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
@@ -155,34 +147,28 @@ public class PageReflexion extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PageReflexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PageStrategy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PageReflexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PageStrategy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PageReflexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PageStrategy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PageReflexion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PageStrategy.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PageReflexion().setVisible(true);
+                new PageStrategy().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_2048;
-    private javax.swing.JButton btn_XO;
+    private javax.swing.JButton btn_dame;
+    private javax.swing.JButton btn_demineur;
     private javax.swing.JButton btn_go_back;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
